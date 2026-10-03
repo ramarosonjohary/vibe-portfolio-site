@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+---
+<BaseLayout title="About — Your Name" description="The story, interests, and current explorations of Your Name. Replace this description with your own.">
+  <section class="page-hero wrap"><p class="eyebrow">A little context</p><h1>Behind<br />the <em>work</em><span class="accent">.</span></h1><p class="page-intro">Your introduction goes here. A few honest sentences about who you are and how you see the world.</p></section>
+  <section class="narrative wrap section" aria-labelledby="story-heading"><p class="eyebrow">01 / My story</p><div><h2 id="story-heading">The path so far</h2><p>Your story goes here. Use this space to describe the experiences and questions that shaped your interests.</p><p>Continue your story here. Share what brought you to the work you do today, and what you’re still figuring out.</p></div></section>
+  <section class="narrative wrap section" aria-labelledby="interests-heading"><p class="eyebrow">02 / What draws me in</p><div><h2 id="interests-heading">Room for curiosity</h2><ul class="interest-list"><li><h3>Interest or area of focus</h3><p>A short explanation of why this matters to you goes here.</p></li><li><h3>Another thing you care about</h3><p>Describe a topic, practice, or question you keep returning to.</p></li><li><h3>Something beyond the work</h3><p>A personal interest or small detail you’d like to share goes here.</p></li></ul></div></section>
+  <section class="narrative wrap section" aria-labelledby="now-heading"><p class="eyebrow">03 / A snapshot</p><div><h2 id="now-heading">Where I am now</h2><dl class="snapshot"><div><dt>Currently</dt><dd>What you’re working on or exploring goes here.</dd></div><div><dt>Previously</dt><dd>A short note about a past chapter goes here.</dd></div><div><dt>Interested in</dt><dd>What you’d like to learn or try next goes here.</dd></div></dl></div></section>
+  <NewsletterSignup />
+</BaseLayout>

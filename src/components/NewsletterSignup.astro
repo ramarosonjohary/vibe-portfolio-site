@@ -1,0 +1,30 @@
+<section class="newsletter" aria-labelledby="newsletter-heading">
+  <div class="wrap newsletter-grid">
+    <div><p class="eyebrow">The newsletter</p><h2 id="newsletter-heading">A little more<br />in your inbox<span class="accent">.</span></h2></div>
+    <div class="newsletter-copy">
+      <p>Newsletter description goes here. A few lines about the ideas, notes, and updates you’ll share.</p>
+      <!-- Future integration: replace this local submit handler with your provider.
+           No email is sent or stored. The input intentionally has no name attribute. -->
+      <form class="newsletter-form" action="#newsletter-heading" method="get">
+        <label for="newsletter-email">Your email address</label>
+        <div class="email-row"><input id="newsletter-email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="newsletter-status" /><button type="submit" disabled>Join <span aria-hidden="true">↗</span></button></div>
+        <p id="newsletter-status" class="form-note" role="status" aria-live="polite">Newsletter integration coming soon. No email will be sent or stored.</p>
+        <noscript><p class="form-note">JavaScript is required to preview this form. Signup is not available yet.</p></noscript>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll<HTMLFormElement>('.newsletter-form').forEach((form) => {
+    const button = form.querySelector<HTMLButtonElement>('button');
+    const input = form.querySelector<HTMLInputElement>('input');
+    const status = form.querySelector<HTMLElement>('[role="status"]');
+    if (button) button.disabled = false;
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      if (status) status.textContent = 'Newsletter integration coming soon. You have not been subscribed; no email was sent or stored.';
+      if (input) input.value = '';
+    });
+  });
+</script>
