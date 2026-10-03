@@ -74,6 +74,8 @@ Push your current branch with `git push -u origin HEAD`. If you are working on a
 
 This is a fully static build. No Cloudflare adapter, Functions, Wrangler package, or bindings are necessary.
 
+`wrangler.json` also provides an optional assets-only Cloudflare Workers deployment configuration: it serves `./dist`, uses compatibility date `2026-10-03`, and has no Worker entry point or SSR adapter. This uses Workers static-asset hosting; the Pages workflow above still uses `npm run build` and `dist`. Build before using Wrangler to deploy. Wrangler is not installed as a project dependency.
+
 References: [Astro setup](https://docs.astro.build/en/install-and-setup/), [Cloudflare Pages Astro guide](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/), [Cloudflare build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/).
 
 ## Verification notes

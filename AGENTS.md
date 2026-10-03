@@ -46,6 +46,7 @@ Retain font fallbacks and `display=swap`. Use mobile-first layouts and fluid `cl
 
 ```text
 astro.config.mjs             Static build; optional SITE_URL
+wrangler.json               Optional assets-only deployment; ./dist, no entry point
 package.json                npm scripts and Astro dependency
 package-lock.json           Reproducible dependency tree
 .nvmrc                      Node version
@@ -163,6 +164,8 @@ For a feature branch, open a pull request and merge into the intended production
 7. Add a custom domain later in the project's Custom domains settings, update `SITE_URL`, and rebuild.
 
 Dashboard labels can change. Use official documentation when checking current deployment details:
+
+The root `wrangler.json` configures optional Cloudflare Workers static-asset hosting with `assets.directory: "./dist"` and compatibility date `2026-10-03`. It intentionally has no `main`, binding, SSR adapter, or backend. Pages Git deployments continue using the build settings above. No Wrangler dependency is installed. Keep this distinction clear when editing deployment instructions.
 
 - https://docs.astro.build/en/install-and-setup/
 - https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/
