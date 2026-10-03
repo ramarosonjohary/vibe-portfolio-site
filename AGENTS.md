@@ -2,6 +2,10 @@
 
 This file documents the first-version requirements, implementation, and maintenance rules for agents working anywhere in this repository. Follow the user's current instructions when they change the scope. Keep this file and `README.md` accurate as the project evolves.
 
+## Current content source
+
+The initial placeholder copy has been replaced with factual copy from `Resume/Johary_Ramaroson_Resume.pdf` (the user-mentioned `content/Johary-Resume.pdf` path was not present). The owner is Johary Ramaroson. Home introduces his Business and Computer Science studies at Brandeis and highlights three experiences. About contains education, personal interests, languages, and background. The Projects route contains five labelled work/leadership experiences, not invented standalone projects. Keep education and awards distinct from these entries, and treat the original placeholder requirements below as historical. Never invent facts. Do not publish the resume or its contact details without a request. Newsletter subscription remains unavailable. The current content changes require user review before pushing to main.
+
 ## Purpose and scope
 
 Build a simple personal website that introduces its owner and encourages visitors to join a future newsletter. Prioritize simplicity, fast performance, easy editing, and code a beginner or another LLM can understand.

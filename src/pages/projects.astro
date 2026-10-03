@@ -4,8 +4,8 @@ import ProjectCard from '../components/ProjectCard.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import { projects } from '../data/projects.js';
 ---
-<BaseLayout title="Projects — Your Name" description="An archive of projects and experiments by Your Name. Replace these placeholder projects and description with your own.">
-  <section class="page-hero wrap"><p class="eyebrow">The project archive / 01—{String(projects.length).padStart(2, '0')}</p><h1>Ideas, made<br /><em>tangible</em><span class="accent">.</span></h1><p class="page-intro">Project introduction goes here. A place for the things you’ve built, the ideas you’ve tested, and the work in between.</p></section>
-  <section class="archive wrap section" aria-labelledby="archive-heading"><div class="section-heading"><h2 id="archive-heading">All projects</h2><span class="eyebrow">{projects.length} projects / 2026</span></div><ol class="project-list">{projects.map(project => <ProjectCard project={project} />)}</ol></section>
+<BaseLayout title="Projects & Experiences — Johary Ramaroson" description="Explore Johary Ramaroson’s product design work at Cinch, student leadership, French debate, and English-test moderation experience.">
+  <section class="page-hero wrap"><p class="eyebrow">Work &amp; experiences / 01—{String(projects.length).padStart(2, '0')}</p><h1>Ideas, made<br /><em>tangible</em><span class="accent">.</span></h1><p class="page-intro">A selection of work and leadership experiences: designing for users, representing students, and taking part in a wider community.</p></section>
+  <section class="archive wrap section" aria-labelledby="archive-heading"><div class="section-heading"><h2 id="archive-heading">Work &amp; experiences</h2><span class="eyebrow">{projects.length} experiences / 2021–2026</span></div><ol class="project-list">{projects.map(project => <ProjectCard project={project} />)}</ol></section>
   <NewsletterSignup />
 </BaseLayout>

@@ -35,7 +35,7 @@ p { color: var(--muted); }
 .skip-link { position: absolute; top: -100px; left: 1rem; padding: .75rem 1rem; z-index: 10; background: #fff; }
 .skip-link:focus { top: 1rem; }
 /* Navigation and footer */
-.site-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.8rem; border-bottom: 1px solid var(--border); }
+.site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.8rem; border-bottom: 1px solid var(--border); }
 .wordmark { font-size: 1.2rem; letter-spacing: -.045em; white-space: nowrap; }
 .wordmark span { color: var(--accent); }
 nav { display: flex; gap: clamp(1rem, 3vw, 2.5rem); font-size: .84rem; }

@@ -1,6 +1,6 @@
-# Your Name — personal portfolio
+# Johary Ramaroson — personal portfolio
 
-A static, three-page Astro website using vanilla CSS. Astro is the only direct npm dependency. No backend, database, CMS, or newsletter service is included.
+A static, three-page Astro website using vanilla CSS. Website copy is based on `Resume/Johary_Ramaroson_Resume.pdf`; the supplied resume remains outside the public assets directory. Astro is the only direct npm dependency. No backend, database, CMS, or newsletter service is included.
 
 ## Run locally
 
@@ -22,17 +22,17 @@ npm run preview
 
 The production files are generated in `dist/`. Commit `package-lock.json` so installations are reproducible; use `npm ci` for a clean installation from that lockfile.
 
-## Replace the placeholders
+## Edit the content
 
 - `src/pages/index.astro`: homepage introduction and about teaser.
 - `src/pages/about.astro`: your personal story, interests, and current snapshot.
 - `src/pages/projects.astro`: archive introduction.
-- `src/data/projects.js`: shared project list. Add entries to expand the archive; the homepage displays the first three. Set a project's `href` to a real destination when available. There are no fake project links.
+- `src/data/projects.js`: shared work and leadership experience list. Add verified entries to expand the archive; the homepage displays the first three. Set a project's `href` to a real destination when available. There are no fake project links.
 - `src/components/Navbar.astro` and `Footer.astro`: name and footer text.
 - `src/components/NewsletterSignup.astro`: newsletter copy and future integration point.
 - `src/layouts/BaseLayout.astro`: shared metadata, fonts, and site name. Page titles and descriptions live in each page.
 - `src/styles/global.css`: colors, type, spacing, and responsive layouts.
-- `public/favicon.svg`: placeholder favicon.
+- `public/favicon.svg`: simple favicon.
 - `public/JoharyPic.jpeg`: original homepage portrait. The homepage uses `/JoharyPic.jpeg` directly; Astro copies the public asset unchanged to `dist/JoharyPic.jpeg`. CSS controls its responsive display size.
 
 Rowan and Quilon load from Fontshare with `display=swap`. System fonts provide a fallback when the service is unavailable.
