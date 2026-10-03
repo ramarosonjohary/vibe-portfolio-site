@@ -77,7 +77,7 @@ Edit page copy in the corresponding `.astro` page. Edit the name in Navbar, Foot
 
 Keep the component structure small. Do not extract every HTML fragment, introduce complicated TypeScript architecture, or add clever abstractions. Use light comments for decisions and integration points. Define shared colors, spacing, content width, typography, and borders with readable CSS custom properties. Avoid deeply nested selectors and excessive utilities.
 
-The homepage's hero includes the user-provided portrait from `public/JoharyPic.jpeg`. It uses Astro's built-in `Image` component, responsive WebP widths, intrinsic dimensions, descriptive alt text, and eager loading because it appears above the fold. It sits alongside the hero copy on desktop and stacks after the copy on smaller screens. Keep the original image intact and use built-in optimization rather than adding an image dependency.
+The homepage's hero includes the user-provided portrait from `public/JoharyPic.jpeg`. It uses a native `<img src="/JoharyPic.jpeg">` with intrinsic dimensions, descriptive alt text, responsive CSS, and eager loading because it appears above the fold. Astro copies the public asset unchanged to `dist/JoharyPic.jpeg`. Keep the exact filename capitalization and root-relative public URL; do not prepend `public/` or import this portrait through an image transformation pipeline. It sits alongside the hero copy on desktop and stacks after the copy on smaller screens. Keep the original image intact and do not add an image dependency.
 
 ## Newsletter contract
 
