@@ -33,6 +33,7 @@ The production files are generated in `dist/`. Commit `package-lock.json` so ins
 - `src/layouts/BaseLayout.astro`: shared metadata, fonts, and site name. Page titles and descriptions live in each page.
 - `src/styles/global.css`: colors, type, spacing, and responsive layouts.
 - `public/favicon.svg`: placeholder favicon.
+- `public/JoharyPic.jpeg`: original homepage portrait. The homepage imports it through Astro's `Image` component to generate responsive WebP versions at build time.
 
 Rowan and Quilon load from Fontshare with `display=swap`. System fonts provide a fallback when the service is unavailable.
 

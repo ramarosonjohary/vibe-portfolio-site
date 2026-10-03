@@ -54,6 +54,7 @@ package-lock.json           Reproducible dependency tree
 README.md                   Beginner setup and deployment guide
 AGENTS.md                   Project requirements and agent guidance
 public/favicon.svg          Simple placeholder favicon
+public/JoharyPic.jpeg        User-provided homepage portrait; preserve the original
 src/
   components/
     Navbar.astro            Wordmark, three links, current-page indication
@@ -75,6 +76,8 @@ src/
 Edit page copy in the corresponding `.astro` page. Edit the name in Navbar, Footer, page metadata, and BaseLayout's site-name metadata. Edit project records in `src/data/projects.js`; each record supports `number`, `title`, `description`, `category`, `year`, `status`, and optional `href`. A missing `href` renders a title without a fake link. The homepage selects the first three records, and the archive count derives from the array length.
 
 Keep the component structure small. Do not extract every HTML fragment, introduce complicated TypeScript architecture, or add clever abstractions. Use light comments for decisions and integration points. Define shared colors, spacing, content width, typography, and borders with readable CSS custom properties. Avoid deeply nested selectors and excessive utilities.
+
+The homepage's hero includes the user-provided portrait from `public/JoharyPic.jpeg`. It uses Astro's built-in `Image` component, responsive WebP widths, intrinsic dimensions, descriptive alt text, and eager loading because it appears above the fold. It sits alongside the hero copy on desktop and stacks after the copy on smaller screens. Keep the original image intact and use built-in optimization rather than adding an image dependency.
 
 ## Newsletter contract
 
